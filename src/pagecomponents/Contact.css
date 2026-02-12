@@ -1,0 +1,61 @@
+/* Contact.css */
+.contact-hero {
+  background: linear-gradient(135deg, var(--bg-primary), var(--bg-secondary));
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+}
+
+.contact-hero h1{
+text-align:center;
+}
+
+.contact-hero p{
+    text-align: center;
+}
+
+.contact-form {
+  background: var(--bg-primary);
+  padding: 6rem 0;
+}
+
+.contact-form .form-control {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  border-radius: 15px;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  background: var(--bg-secondary);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 0.2rem rgba(0, 212, 255, 0.25);
+  color: var(--text-primary);
+}
+
+.contact-form .form-control::placeholder {
+  color: #8a8a8a;
+}
+
+.contact-form textarea.form-control {
+  resize: vertical;
+}
+
+.contact-form .btn-primary {
+  background: linear-gradient(45deg, var(--accent-cyan), #0099cc);
+  border: none;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1.2rem;
+  transition: all 0.4s ease;
+}
+
+.contact-form .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+}

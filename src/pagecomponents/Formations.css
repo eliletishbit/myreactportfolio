@@ -1,0 +1,62 @@
+/* Formations.css */
+.formations-hero {
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formations-grid {
+  background: var(--bg-primary);
+  padding: 6rem 0;
+}
+
+.formation-card {
+  background: var(--bg-card);
+  padding: 3rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.formation-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 25px 60px rgba(0, 212, 255, 0.2);
+}
+
+.formation-card h3 {
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.formation-card .price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  margin-bottom: 2rem;
+}
+
+.formation-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.formation-card ul li {
+  color: #b0b0b0;
+  padding: 0.5rem 0;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.formation-card ul li::before {
+  content: '✓';
+  color: var(--accent-cyan);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}

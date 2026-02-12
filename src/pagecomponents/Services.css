@@ -1,0 +1,93 @@
+/* Services.css - Dark PRO */
+.services-hero {
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-section {
+  background: var(--bg-primary);
+  padding: 6rem 0;
+}
+
+.price-card {
+  background: var(--bg-card);
+  padding: 3rem 2rem;
+  border-radius: 25px;
+  text-align: center;
+  height: 100%;
+  border: 1px solid var(--border-subtle);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.price-card.popular {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.price-card.popular .price {
+  color: var(--accent-cyan);
+}
+
+.price-header h3 {
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--accent-cyan);
+  margin-bottom: 2rem;
+}
+
+.price span {
+  font-size: 0.4em;
+  font-weight: 400;
+}
+
+.price-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.price-features li {
+  color: #b0b0b0;
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.process-section {
+  background: var(--bg-secondary);
+  padding: 6rem 0;
+}
+
+.process-step {
+  text-align: center;
+  padding: 2rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-10px);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0 auto 1rem;
+}
