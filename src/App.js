@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Routes, Route , NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route , NavLink } from "react-router-dom";
 import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Home from "./pagecomponents/Home";
