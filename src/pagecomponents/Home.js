@@ -1,10 +1,40 @@
-import React from "react";
+import React ,  {useState , useEffect} from 'react';
 import "./Home.css";
 
+
+
 function Home() {
+
+  // STATES AU NIVEAU Home
+  const [experience, setExperience] = useState(0);
+  const [projets, setProjets] = useState(0);
+  const [satisfaction, setSatisfaction] = useState(0);
+
+  //  useEffect AU NIVEAU Home
+  useEffect(() => {
+    const handleCounter = (setter, target, duration = 2000) => {
+      let start = 0;
+      const increment = target / (duration / 16);
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+          setter(target);
+          clearInterval(timer);
+        } else {
+          setter(Math.floor(start));
+        }
+      }, 16);
+    };
+
+    handleCounter(setExperience, 4);
+    handleCounter(setProjets, 5);
+    handleCounter(setSatisfaction, 100);
+  }, []);
+
+
   return (
     <div className="home-container">
-      <section className="hero-section container-fluid py-5">
+      <section className="hero-section container-fluid py-5 position-relative">
         <div className="row align-items-center min-vh-80">
           {/* ✅ COLONNE GAUCHE : Titre + Texte + CTA */}
           <div className="col-lg-6 col-md-12 ps-lg-5 order-2 order-lg-1 col-gauche-hero ">
@@ -45,13 +75,14 @@ Laravel backend en bonus pour projets complets. voici mon portfolio
                 src="./images/myphoto.png"
                 alt="Développeur Full-Stack"
                 className="img-fluid rounded-4 shadow-lg hero-image"
-              />
-              {/* Classes prêtes pour effets lumineux */}
-              <div className="hero-glow-left position-absolute"></div>
-              <div className="hero-glow-right position-absolute"></div>
+              />              
             </div>
           </div>
         </div>
+
+              {/* Classes prêtes pour effets lumineux */}
+              <div className="hero-glow-left "></div>
+              <div className="hero-glow-right "></div>
       </section>
 
       {/* ✅ SECTION 1 : COMPÉTENCES */}
@@ -102,36 +133,40 @@ Laravel backend en bonus pour projets complets. voici mon portfolio
       </section>
 
       {/* ✅ SECTION 2 : À PROPOS */}
-      <section className="about-section container-fluid py-5" style={{background: 'var(--bg-card)'}}>
-        <div className="row align-items-center">
-          <div className="col-lg-6 order-2 order-lg-1">
-            <h2 className="section-title">À Propos</h2>
-            <p className="about-text">
-              Développeur Full-Stack passionné basé au Bénin. 
-              2+ ans d'expérience en création d'applications web performantes.
-            </p>
-            <div className="stats-row">
-              <div className="stat-item">
-                <h3>2+</h3>
-                <p>Ans d'expérience</p>
-              </div>
-              <div className="stat-item">
-                <h3>15+</h3>
-                <p>Projets réalisés</p>
-              </div>
-              <div className="stat-item">
-                <h3>100%</h3>
-                <p>Satisfaction client</p>
-              </div>
+       <section className="about-section container-fluid py-5 px-5" style={{background: 'var(--bg-card)'}}>
+      <div className="row align-items-center">
+        <div className="col-lg-6 order-2 order-lg-1">
+          <h2 className="section-title">À Propos</h2>
+          <p className="about-text">
+            Rodrigue Elie K.T. APOTHEY, <strong>Frontend React Spécialiste</strong> (2+ ans).
+            <br />
+            <strong>5+ ans expérience</strong> développement web (HTML/CSS/JS/PHP/Laravel).
+            <br />
+            Intégration <strong>Figma pixel-perfect</strong> → interfaces ultra-modernes.
+          </p>
+
+          <div className="stats-row">
+            <div className="stat-item">
+              <h3>{experience}<span>+</span></h3>
+              <p>Ans d'expérience</p>
             </div>
-          </div>
-          <div className="col-lg-6 order-1 order-lg-2 text-center">
-            <div className="about-image">
-              <img src="./images/about.jpg" alt="À propos" className="img-fluid rounded-circle" />
+            <div className="stat-item">
+              <h3>{projets}<span>+</span></h3>
+              <p>Projets réalisés</p>
+            </div>
+            <div className="stat-item">
+              <h3>{satisfaction}%</h3>
+              <p>Satisfaction client</p>
             </div>
           </div>
         </div>
-      </section>
+        <div className="col-lg-6 order-1 order-lg-2 text-center">
+          <div className="about-image">
+            <img src="./images/about.jpg" alt="À propos" className="img-fluid rounded-circle" />
+          </div>
+        </div>
+      </div>
+    </section>
 
       {/* ✅ SECTION 3 : SERVICES */}
       <section className="services-section container py-5">

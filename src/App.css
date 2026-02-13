@@ -95,4 +95,12 @@ body {
   min-height: 100vh;
 }
 
+.nav-active {
+  background: linear-gradient(45deg, var(--accent-cyan), #0099cc) !important;
+  color: #0a0a0a !important;
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+  transform: translateY(-2px);
+}
+
 /************************************************** Fin navigation ************************/

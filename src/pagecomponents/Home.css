@@ -137,34 +137,59 @@
 }
 
 /* EFFETS LUMINEUX */
+
 .hero-glow-left {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle 150px at 20% 80%, rgba(0, 212, 255, 0.3), transparent 60%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;                    /* ✅ VRAI ROND */
+  background: radial-gradient(circle at 30% 30%, 
+    rgba(0, 212, 255, 0.6) 0%, 
+    rgba(0, 212, 255, 0.2) 50%, 
+    transparent 70%);
   position: absolute;
-  left: -675px;
-  top: 15%;
-  z-index:0;
-  animation: float 6s ease-in-out infinite;
+  bottom: -50px;                         /* ✅ BAS section */
+  left: 10%;
+  z-index: 0;
+  animation: floatBalloon 4s ease-in-out infinite;
+  box-shadow: 
+    0 0 50px rgba(0, 212, 255, 0.5),
+    inset 0 0 50px rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(0, 212, 255, 0.3);
 }
 
+
+
 .hero-glow-right {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle 200px at 80% 30%, rgba(124, 58, 237, 0.2), transparent 60%);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;                    /* ✅ VRAI ROND */
+  background: radial-gradient(circle at 70% 40%, 
+    rgba(124, 58, 237, 0.5) 0%, 
+    rgba(124, 58, 237, 0.2) 50%, 
+    transparent 70%);
   position: absolute;
-  right: -150px;
-  bottom: 10%;
+  bottom: -80px;                         /* ✅ BAS section */
+  right: 10%;
   z-index: 0;
-  animation: float 3s ease-in-out infinite reverse;
+  animation: floatBalloon 5s ease-in-out infinite reverse;
+  box-shadow: 
+    0 0 60px rgba(124, 58, 237, 0.4),
+    inset 0 0 50px rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(124, 58, 237, 0.3);
 }
 
 /* Animations */
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(2deg); }
+@keyframes floatBalloon {
+  0%, 100% { 
+    transform: translateY(0) scale(1) rotate(0deg); 
+  }
+  33% { 
+    transform: translateY(-600px) scale(1.05) rotate(2deg); 
+  }
+  66% { 
+    transform: translateY(-15px) scale(0.98) rotate(-1deg); 
+  }
 }
-
 
 /**********************************************************************************************/
 

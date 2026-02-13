@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Link, Routes, Route , NavLink } from "react-router-dom";
 import bootstrap from "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Home from "./pagecomponents/Home";
@@ -10,6 +10,9 @@ import Formations from "./pagecomponents/Formations";
 import { useState } from "react";
 
 function App() {
+
+
+
   return (
     <div className="App">
       <header className="header-section">         
@@ -17,41 +20,69 @@ function App() {
           <nav className=" navigation-bar">
             <ul className="nav nav-pills">
                <li>
-                <Link className="btn btn-outline-info ms-0 link text-start" to="/rodrigue">
-                 Rodrigue E.APOTHEY
-                </Link>
+               <NavLink 
+                to="/rodrigue" 
+                className={({ isActive }) => 
+                  `btn btn-outline-info ms-0 link text-start ${isActive ? 'nav-active' : ''}`
+                }
+              >
+                Rodrigue E.APOTHEY
+              </NavLink>
               </li>
+                
+                <li>
+                <NavLink 
+                to="/home" 
+                className={({ isActive }) => 
+                  `btn btn-outline-info ms-0 link   ${isActive ? 'nav-active' : ''}`
+                }
+              >
+                Home
+              </NavLink>
+                </li>
+              
               <li>
-                <Link className="btn btn-outline-info ms-0 link" to="/home">
-                  Home{" "}
-                </Link>
+               <NavLink 
+                to="/portfolio" 
+                className={({ isActive }) => 
+                  `btn btn-outline-info ms-0 link   ${isActive ? 'nav-active' : ''}`
+                }
+              >
+               Portfolio
+              </NavLink>
               </li>
 
               <li>
-                <Link
-                  className="btn btn-outline-info ms-0 link"
-                  to="/portfolio"
-                >
-                  Portfolio
-                </Link>
+               <NavLink 
+                to="/services" 
+                className={({ isActive }) => 
+                  `btn btn-outline-info ms-0 link   ${isActive ? 'nav-active' : ''}`
+                }
+              >
+                Services
+              </NavLink>
               </li>
 
               <li>
-                <Link className="btn btn-outline-info ms-0 link" to="/services">
-                  Services
-                </Link>
+                <NavLink 
+                to="/formations" 
+                className={({ isActive }) => 
+                  `btn btn-outline-info ms-0 link   ${isActive ? 'nav-active' : ''}`
+                }
+              >
+                Formations
+              </NavLink>
               </li>
 
               <li>
-                <Link className="btn btn-outline-info ms-0 link" to="/formations">
-                  Formations
-                </Link>
-              </li>
-
-              <li>
-                <Link className="btn btn-outline-info ms-0 link" to="/contact">
-                  Contact
-                </Link>
+                <NavLink 
+                to="/contact" 
+                className={({ isActive }) => 
+                  `btn btn-outline-info ms-0 link   ${isActive ? 'nav-active' : ''}`
+                }
+              >
+                Contact
+              </NavLink>
               </li>
             </ul>
           </nav>

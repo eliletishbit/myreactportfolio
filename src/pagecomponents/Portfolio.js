@@ -9,7 +9,7 @@ function Portfolio() {
     <div className="portfolio-page">
       <section className="portfolio-hero container-fluid py-5">
         <h1 className="display-3 text-center">Portfolio</h1>
-        <p>Je crée des interfaces modernes React et intègre des sites WordPress pixel-perfect</p>
+        {/* <p>Je crée des interfaces React modernes et intègre vos designs(Figma/xd) <br/> → HTML/CSS/JS/WordPress/React pixel-perfect</p> */}
       </section>
 
       <section className="portfolio-grid container py-5">
@@ -44,6 +44,8 @@ function Portfolio() {
               </div>
             </div>
           </div>
+
+          
 
         </div>
       </section>
